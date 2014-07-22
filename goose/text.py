@@ -97,7 +97,7 @@ class StopWords(object):
             path = os.path.join('text', 'stopwords-%s.txt' % language)
             if not os.path.exists(path):
                 # fallback to en
-                path = os.path.join('text', 'stopwords-en.txt' % language)
+                path = os.path.join('text', 'stopwords-en.txt')
             self._cached_stop_words[language] = set(FileHelper.loadResourceFile(path).splitlines())
         self.STOP_WORDS = self._cached_stop_words[language]
 
